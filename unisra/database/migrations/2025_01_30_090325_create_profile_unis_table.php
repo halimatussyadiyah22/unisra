@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('laboratorium', function (Blueprint $table) {
+        Schema::create('profile_unis', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->unsignedBigInteger('prodi_id');
-            $table->foreign('prodi_id')->references('id')->on('prodi');
+            $table->text('deskripsi');
+            $table->string('logo');
+            $table->text('makna_logo');
             $table->timestamps();
         });
     }
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('laboratorium');
+        Schema::dropIfExists('profile_unis');
     }
 };

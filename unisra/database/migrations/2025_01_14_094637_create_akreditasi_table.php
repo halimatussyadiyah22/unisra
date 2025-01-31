@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('akreditasi', function (Blueprint $table) {
             $table->id();
-            $table->string('akreditasi');
+            $table->string('nilai');
             $table->string('sertifikat');
             $table->unsignedBigInteger('prodi_id');
             $table->foreign('prodi_id')->references('id')->on('prodi');
