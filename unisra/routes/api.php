@@ -18,4 +18,4 @@ use App\Http\Controllers\ProfileUnisController;
 //     return $request->user();
 // });
 
-Route::get('/profileUnis',[ProfileUnisController::class, 'index']);
+Route::apiResource('/profileUnis',ProfileUnisController::class);
